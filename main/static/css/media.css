@@ -350,50 +350,134 @@ body{
 }
 
 /* ---------- Experts ---------- */
-.experts-section{
-  padding:4rem 1.25rem 3rem;
-  max-width:1200px;
-  margin:0 auto;
-  text-align:center;
-}
-.experts-grid{
-  display:grid;
-  grid-template-columns:repeat(3, minmax(220px, 1fr));
-  gap:1.75rem;
-  margin-top:2.5rem;
-  justify-items:center;
-}
-.expert-card{
-  width:100%;
-  max-width:260px;
-  border-radius:22px;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.14);
-  padding:1.4rem 1.2rem 1.6rem;
-  box-shadow:0 10px 25px rgba(0,0,0,0.35);
-}
-.expert-card img{
-  width:100%;
-  height:220px;
-  border-radius:18px;
-  object-fit:cover;
-  margin-bottom:0.9rem;
-  display:block;
-}
-.expert-card h4{
-  margin-bottom:0.2rem;
-  font-size:1rem;
-}
-.expert-card .role{
-  font-size:0.9rem;
-  color:var(--text-muted);
-}
-.expert-card.placeholder{
-  visibility:hidden;
-  pointer-events:none;
+.experts-section {
+    width: 100%;
+    padding: 80px 6%;
+    background: linear-gradient(135deg, #2b004f, #81007f);
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* ---------- Contact ---------- */
+.experts-title {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.experts-subtitle {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    place-items: center;
+}
+
+.expert-card {
+    width: 260px;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.expert-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.expert-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(35%);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    opacity: 0;
+    transition: .5s ease;
+    text-align: left;
+}
+
+.expert-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.overlay p {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.view-btn {
+    margin-top: 12px;
+    padding: 8px 20px;
+    border: none;
+    background: #ff28d4;
+    color: white;
+    font-size: 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.view-btn:hover {
+    background: #ff53e2;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.75);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 420px;
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 160px;
+    height: 160px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.close-modal {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+
 /* CONTACT MAIN WRAPPER */
 .contact{
   padding:3rem 1.5rem;
@@ -485,35 +569,24 @@ body{
   align-items:center;
 }
 
-.contact-expert-circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #d9d9d9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: -10px;
-
-  /* White glow effect */
-  border: 3px solid #ffffff;
-  box-shadow: 0 0 14px rgba(255, 255, 255, 0.9);
-
+.contact-expert-circle{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  overflow:hidden;
+  background:#d9d9d9;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-left:-10px;
+  box-shadow:0 0px 18px rgba(211, 199, 199, 0.936);
+  border: 3px solid rgba(255, 255, 255, 1);       /* Strong white border */
   transition: 0.3s ease;
 }
-
 .contact-expert-circle:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  box-shadow: 0 0 18px rgb(211, 199, 199,0.936); /* Stronger glow on hover */
   transform: scale(1.05);
 }
-
-
-.contact-expert-circle:hover {
-  box-shadow: 0 0 18px rgba(255, 255, 255, 1); /* Stronger glow on hover */
-  transform: scale(1.05);
-}
-
 
 .contact-expert-circle:first-child{
   margin-left:0;
@@ -530,6 +603,7 @@ body{
   background:transparent;
   border:3px solid #ff4bdc;
 }
+
 .contact-experts-caption{
   display:flex;
   flex-direction:column;
@@ -632,6 +706,12 @@ body{
 }
 
 /* Responsive */
+@media (max-width:900px){
+  .contact-row{flex-direction:column;}
+}
+
+
+/* Responsive */
 
 @media (max-width:768px){
   /* show toggle, hide nav pills */
@@ -677,4 +757,105 @@ body{
   #contact .contact-right{
     flex:1 1 100%;
   }
+}
+
+
+
+/* Experts Grid */
+.experts-grid {
+    display: grid;
+    gap: 22px;
+    width: 90%;
+    margin: auto;
+}
+
+/* ------------------------------
+   DESKTOP 12-COLUMN GRID SYSTEM
+--------------------------------*/
+
+/* Desktop Columns */
+@media (min-width: 900px) {
+    .experts-grid {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    /* Row 1 → 2 experts */
+    .experts-grid > .expert-card:nth-child(1),
+    .experts-grid > .expert-card:nth-child(2) {
+        grid-column: span 6;   /* 2 per row */
+    }
+
+    /* Row 2 → 3 experts */
+    .experts-grid > .expert-card:nth-child(3),
+    .experts-grid > .expert-card:nth-child(4),
+    .experts-grid > .expert-card:nth-child(5) {
+        grid-column: span 4;   /* 3 per row */
+    }
+
+    /* Row 3 → 4 experts */
+    .experts-grid > .expert-card:nth-child(n+6):nth-child(-n+9) {
+        grid-column: span 3;   /* 4 per row */
+    }
+}
+
+/* Tablet: 2 per row */
+@media (max-width: 899px) {
+    .experts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 500px) {
+    .experts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------
+   IMAGE SIZE + CARD STYLE
+--------------------------------*/
+
+.expert-card {
+    position: relative;
+    height: 220px;  /* 👈 Reduced image size */
+    overflow: hidden;
+    border-radius: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+/* Glow effect on hover */
+.expert-card:hover {
+    transform: scale(1.05);
+    border-color: #fff;
+    box-shadow: 0 0 18px rgba(255,255,255,0.6);
+}
+
+/* Image */
+.expert-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s ease;
+}
+
+/* Zoom on hover */
+.expert-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: -100%;
+    background: rgba(0,0,0,0.75);
+    width: 100%;
+    padding: 18px;
+    transition: .4s ease;
+}
+
+.expert-card:hover .overlay {
+    bottom: 0;
 }

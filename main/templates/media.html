@@ -89,110 +89,205 @@
 
     <!-- SERVICES -->
     <section id="services" class="services">
-      <div class="divider">
+    <div class="divider">
         <hr>
         <div class="divider-icon">
-          <img src="{% static 'img/product-management.png' %}" alt="">
+            <img src="{% static 'img/product-management.png' %}" alt="">
         </div>
         <hr>
-      </div>
+    </div>
 
-      <h3 class="section-heading">OUR SERVICES</h3>
-      <p class="section-subheading">Creative visuals and digital strategies, all in one place</p>
+    <h3 class="section-heading">OUR SERVICES</h3>
+    <p class="section-subheading">Creative visuals and digital strategies, all in one place</p>
 
-      <div class="services-container">
+    <div class="services-container">
+
         <article class="card service-card">
-          <div class="service-icon">
-            <img src="{% static 'img/brush-stroke.png' %}" alt="">
-          </div>
-          <h4>Graphic Design</h4>
-          <p>Logos, brand identity, mockups, social media creatives and more.</p>
+            <div class="service-icon">
+                <img src="{% static 'img/brush-stroke.png' %}" alt="">
+            </div>
+            <h4>Graphic Designing</h4>
+            <p>Logos, brand identity, mockups, posters, and social media creatives.</p>
         </article>
 
         <article class="card service-card">
-          <div class="service-icon">
-            <img src="{% static 'img/social-media.png' %}" alt="">
-          </div>
-          <h4>Social Media Management</h4>
-          <p>Content planning, post design, Instagram &amp; Facebook handling.</p>
+            <div class="service-icon">
+                <img src="{% static 'img/social-media.png' %}" alt="">
+            </div>
+            <h4>Social Media Management</h4>
+            <p>Content creation, post scheduling, page handling, and brand engagement.</p>
         </article>
 
         <article class="card service-card">
-          <div class="service-icon">
-            <img src="{% static 'img/idea.png' %}" alt="">
-          </div>
-          <h4>UI &amp; Web Design</h4>
-          <p>Modern, user-friendly websites, landing pages and UI layouts.</p>
+            <div class="service-icon">
+                <img src="{% static 'img/idea.png' %}" alt="">
+            </div>
+            <h4>UI & UX Designing</h4>
+            <p>Modern user interfaces, intuitive experiences, and mobile/web layouts.</p>
         </article>
-      </div>
-    </section>
+
+        <article class="card service-card">
+            <div class="service-icon">
+                <img src="{% static 'img/web-dev.png' %}" alt="">
+            </div>
+            <h4>Web Development</h4>
+            <p>Responsive, fast, and high-performing websites built for your business.</p>
+        </article>
+
+        <article class="card service-card">
+            <div class="service-icon">
+                <img src="{% static 'img/interior.png' %}" alt="">
+            </div>
+            <h4>Interior & Exterior Designing</h4>
+            <p>Creative space design, modern aesthetics, and professional planning.</p>
+        </article>
+
+        <article class="card service-card">
+            <div class="service-icon">
+                <img src="{% static 'img/content.png' %}" alt="">
+            </div>
+            <h4>Content Creation</h4>
+            <p>Visual and written content crafted to represent your brand’s identity.</p>
+        </article>
+
+    </div>
+</section>
 
     <!-- MISSION & VISION -->
     <section class="mission-vision">
-      <h3 class="section-heading">Our mission and vision</h3>
-      <p class="section-subheading">Building brands with impact</p>
+      <h3 class="section-heading">Our Mission And Vision</h3>
+      <p class="section-subheading">Building brands with Innovation and Impactful</p>
 
       <div class="mission-vision-container">
         <article class="card">
-          <h4>Mission</h4>
+          <h4>MISSION</h4>
           <p>
-            To design meaningful visuals and manage digital strategies that help brands grow every day.
-            We blend creativity with strategy so every brand leaves a lasting impression.
+            Our mission is to help brands express who they truly are.
+We do this through creative graphic design, smart digital marketing, engaging content, stunning interiors, and meaningful online experiences.
+We aim to create work that not only looks beautiful but also builds trust, increases visibility, and helps businesses grow.
+Every design, every strategy, and every idea we create has one purpose: to connect people with your brand in a memorable way.
           </p>
         </article>
 
         <article class="card">
-          <h4>Vision</h4>
+          <h4>VISION</h4>
           <p>
-            To be the trusted hub where businesses find creative design and smart social media solutions
-            for long-term success. We help brands connect, engage and thrive in the digital world.
+            Our vision is to become a leading creative agency that sets new standards in branding, design, and digital innovation.
+We want to help businesses communicate better by giving them strong visuals, powerful storytelling, and effective digital presence.
+We dream of a future where every brand — big or small — has the opportunity to stand out and shine through creative and impactful work.
+By blending technology, creativity, and strategy, we aim to create experiences that stay in people’s minds.
           </p>
         </article>
       </div>
     </section>
 
-    <!-- MEET THE EXPERTS (2 on top, 3 below) -->
     <section id="experts" class="experts-section">
-      <h3 class="section-heading">Our Team</h3>
-      <p class="section-subheading">Meet the experts</p>
+    <h2 class="experts-title">Our Team</h2>
+    <h3 class="experts-subtitle">Meet Our Experts</h3>
 
-      <div class="experts-grid">
-        <!-- Row 1: 2 cards -->
-        <article class="expert-card">
-          <img src="{% static 'img/pavan.JPG' %}" alt="Expert 1">
-          <h4>Pavankalyan</h4>
-          <p class="role">Full Stack Developer</p>
-        </article>
+    <div class="experts-grid">
 
-        <article class="expert-card">
-          <img src="{% static 'img/pavan.jpg' %}" alt="Expert 2">
-          <h4>Kiran Kumar</h4>
-          <p class="role">UI Designer &amp; SMM</p>
-        </article>
+        <!-- Row 1 – 2 Experts -->
+        <div class="expert-card" data-expert="1">
+            <img src="{% static 'img/pavan.jpg' %}" alt="Pavan">
+            <div class="overlay">
+                <h4>Pavankalyan</h4>
+                <p>Full Stack Developer</p>
+                <button class="view-btn">View Works</button>
+            </div>
+        </div>
 
-        <!-- spacer to create 2 + 3 layout -->
-        <article class="expert-card placeholder"></article>
+        <div class="expert-card" data-expert="2">
+            <img src="{% static 'img/pavan.jpg' %}" alt="Kiran">
+            <div class="overlay">
+                <h4>Kiran Kumar</h4>
+                <p>UI Designer • SMM</p>
+                <button class="view-btn">View Works</button>
+            </div>
+        </div>
 
-        <!-- Row 2: 3 cards -->
-        <article class="expert-card">
-          <img src="{% static 'img/pavan.jpg' %}" alt="Expert 3">
-          <h4>Member 3</h4>
-          <p class="role">Position</p>
-        </article>
+        <!-- Row 2 – 3 Experts -->
+        <div class="expert-card" data-expert="3">
+            <img src="{% static 'img/pavan.jpg' %}" alt="">
+            <div class="overlay">
+                <h4>Member 3</h4>
+                <p>Frontend Developer</p>
+                <button class="view-btn">View Works</button>
+            </div>
+        </div>
 
-        <article class="expert-card">
-          <img src="{% static 'img/pavan.JPG' %}" alt="Expert 4">
-          <h4>Member 4</h4>
-          <p class="role">Position</p>
-        </article>
+        <div class="expert-card" data-expert="4">
+            <img src="{% static 'img/pavan.jpg' %}" alt="">
+            <div class="overlay">
+                <h4>Member 4</h4>
+                <p>Backend Developer</p>
+                <button class="view-btn">View Works</button>
+            </div>
+        </div>
 
-        <article class="expert-card">
-          <img src="{% static 'img/pavan.jpg' %}" alt="Expert 5">
-          <h4>Member 5</h4>
-          <p class="role">Position</p>
-        </article>
-      </div>
-    </section>
+        <div class="expert-card" data-expert="5">
+            <img src="{% static 'img/pavan.jpg' %}" alt="">
+            <div class="overlay">
+                <h4>Member 5</h4>
+                <p>Marketing Expert</p>
+                <button class="view-btn">View Works</button>
+            </div>
+        </div>
+
+        <!-- Row 3 – 4 Experts -->
+        <div class="expert-card" data-expert="6">
+            <img src="{% static 'img/pavan.jpg' %}" alt="">
+            <div class="overlay">
+                <h4>Member 6</h4>
+                <p>Project Manager</p>
+                <button class="view-btn">View Works</button>
+            </div>
+        </div>
+
+        <div class="expert-card" data-expert="7">
+            <img src="{% static 'img/pavan.jpg' %}" alt="">
+            <div class="overlay">
+                <h4>Member 7</h4>
+                <p>App Developer</p>
+                <button class="view-btn">View Works</button>
+            </div>
+        </div>
+
+        <div class="expert-card" data-expert="8">
+            <img src="{% static 'img/pavan.jpg' %}" alt="">
+            <div class="overlay">
+                <h4>Member 8</h4>
+                <p>Brand Strategist</p>
+                <button class="view-btn">View Works</button>
+            </div>
+        </div>
+
+        <div class="expert-card" data-expert="9">
+            <img src="{% static 'img/pavan.jpg' %}" alt="">
+            <div class="overlay">
+                <h4>Member 9</h4>
+                <p>Video Editor</p>
+                <button class="view-btn">View Works</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- MODAL -->
+<div id="expertModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+
+        <img id="modalImg" src="" alt="">
+        <h2 id="modalName"></h2>
+        <h4 id="modalRole"></h4>
+        <p id="modalDescription"></p>
+
+        <h3>Projects:</h3>
+        <ul id="modalProjects"></ul>
+    </div>
+</div>
 
     <!-- CONTACT US -->
     <section id="contact" class="contact">
@@ -313,6 +408,48 @@
         a.addEventListener('click', () => body.classList.remove('nav-open'));
       });
     })();
+    const experts = {
+    1: {
+        img: "{% static 'img/pavan.jpg' %}",
+        name: "Pavankalyan",
+        role: "Full Stack Developer",
+        desc: "Expert in MERN stack, backend architecture, API development.",
+        projects: ["MediaMark Hub Website", "Admin Dashboard", "API Automation"]
+    },
+    2: {
+        img: "{% static 'img/kiran.jpg' %}",
+        name: "Kiran Kumar",
+        role: "UI Designer & SMM",
+        desc: "Creates elegant UI, strong SMM marketing strategies.",
+        projects: ["Brand Campaign", "UI Redesign", "Portfolio Design"]
+    }
+};
+
+document.querySelectorAll(".expert-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const id = card.getAttribute("data-expert");
+        const data = experts[id];
+
+        if (!data) return;
+
+        document.getElementById("modalImg").src = data.img;
+        document.getElementById("modalName").innerText = data.name;
+        document.getElementById("modalRole").innerText = data.role;
+        document.getElementById("modalDescription").innerText = data.desc;
+
+        const list = document.getElementById("modalProjects");
+        list.innerHTML = "";
+        data.projects.forEach(p => {
+            list.innerHTML += `<li>${p}</li>`;
+        });
+
+        document.getElementById("expertModal").style.display = "flex";
+    });
+});
+
+document.querySelector(".close-modal").onclick = () =>
+    document.getElementById("expertModal").style.display = "none";
+
   </script>
 </body>
 </html>
