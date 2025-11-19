@@ -196,94 +196,97 @@
 
     <!-- CONTACT US -->
     <section id="contact" class="contact">
-      <div class="container-narrow contact-row">
+  <div class="container-narrow contact-row">
 
-        <!-- LEFT SIDE -->
-        <div class="contact-left">
-          <h2 class="contact-title">CONTACT US</h2>
-          <p class="contact-sub">
-            Have a projects in mind?<br>
-            You’re just one message away.
-          </p>
+    <!-- LEFT SIDE -->
+    <div class="contact-left">
+      <h2 class="contact-title">CONTACT US</h2>
+      <p class="contact-sub">
+        Have a projects in mind?<br>
+        You’re just one message away.
+      </p>
 
-          <!-- INFO BOX -->
-          <div class="contact-info-box">
-            <div class="contact-info-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
-                <polyline points="3 7 12 13 21 7"/>
-              </svg>
-              <p>mediamarkhub@gmail.com</p>
-            </div>
-
-            <div class="contact-info-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12 1.05.35 2.08.68 3.07a2 2 0 0 1-.45 2.11L9.91 10.09a16 16 0 0 0 6 6l1.19-1.19a2 2 0 0 1 2.11-.45c.99.33 2.02.56 3.07.68A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              <p>+91 63035 47779</p>
-            </div>
-
-            <div class="contact-info-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
-              <p>mediamarkhub.com</p>
-            </div>
-          </div>
-
-          <!-- OUR EXPERTS CIRCLES -->
-          <div class="contact-experts-row">
-            <div class="contact-experts-avatars">
-              <div class="contact-expert-circle">
-                <img src="{% static 'img/pavan.jpg' %}" alt="Expert 1">
-              </div>
-              <div class="contact-expert-circle">
-                <img src="{% static 'img/pavan.jpg' %}" alt="Expert 2">
-              </div>
-              <div class="contact-expert-circle">
-                <img src="{% static 'img/pavan.jpg' %}" alt="Expert 3">
-              </div>
-              <div class="contact-expert-circle contact-expert-outline">
-                <img src="{% static 'img/pavan.jpg' %}" alt="Expert 4">
-              </div>
-            </div>
-
-            <div class="contact-experts-caption">
-              <span class="contact-experts-line"></span>
-              <span class="contact-experts-label">OUR EXPERTS</span>
-            </div>
-          </div>
+      <!-- INFO BOX -->
+      <div class="contact-info-box">
+        <div class="contact-info-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+            <polyline points="3 7 12 13 21 7"/>
+          </svg>
+          <p>mediamarkhub@gmail.com</p>
         </div>
 
-        <!-- RIGHT SIDE : FORM + SOCIAL ICONS -->
-        <div class="contact-right">
-          <div class="contact-form-card">
-            <form action="{% url 'contact_submit' %}" method="post">
-              {% csrf_token %}
-              <h4>WHAT DO YOU WANT?</h4>
-
-              <input type="text" name="name" placeholder="Your name" required>
-              <input type="tel" name="mobile" placeholder="Mobile number">
-              <input type="email" name="email" placeholder="Your mail ID" required>
-              <textarea name="message" rows="4" placeholder="Message" required></textarea>
-
-              <button type="submit">Sent Message</button>
-
-              <p class="form-caption">Somthing line About this<br>form</p>
-            </form>
-
-            <!-- Social icons -->
-            <div class="contact-social">
-              <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-              <a href="mailto:mediamarkhub@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-              <a href="https://wa.me/916303547779" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-              <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-          </div>
+        <div class="contact-info-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12 1.05.35 2.08.68 3.07a2 2 0 0 1-.45 2.11L9.91 10.09a16 16 0 0 0 6 6l1.19-1.19a2 2 0 0 1 2.11-.45c.99.33 2.02.56 3.07.68A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <p>+91 63035 47779</p>
         </div>
 
+        <div class="contact-info-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <p>mediamarkhub.com</p>
+        </div>
       </div>
+
+      <!-- EXPERTS (FIXED – no links) -->
+      <div class="contact-experts-row">
+        <div class="contact-experts-avatars">
+          <div class="contact-expert-circle">
+            <img src="{% static 'img/pavan.jpg' %}" alt="Expert 1">
+          </div>
+          <div class="contact-expert-circle">
+            <img src="{% static 'img/pavan.jpg' %}" alt="Expert 2">
+          </div>
+          <div class="contact-expert-circle">
+            <img src="{% static 'img/pavan.jpg' %}" alt="Expert 3">
+          </div>
+          <div class="contact-expert-circle">
+            <img src="{% static 'img/pavan.jpg' %}" alt="Expert 4">
+          </div>
+        </div>
+
+        <div class="contact-experts-caption">
+          <span class="contact-experts-line"></span>
+          <span class="contact-experts-label">OUR EXPERTS</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-right">
+      <div class="contact-form-card">
+        <form action="{% url 'contact_submit' %}" method="post">
+          {% csrf_token %}
+          <h4>WHAT DO YOU WANT?</h4>
+
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="tel" name="mobile" placeholder="Mobile number">
+          <input type="email" name="email" placeholder="Your mail ID" required>
+          <textarea name="message" rows="4" placeholder="Message" required></textarea>
+
+          <button type="submit">Sent Message</button>
+
+          <p class="form-caption">Fill in your details and we’ll connect with you at the earliest.
+               <br>form</p>
+        </form>
+
+        <div class="contact-social">
+          <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:mediamarkhub@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://wa.me/916303547779" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
     </section>
   </main>
 
