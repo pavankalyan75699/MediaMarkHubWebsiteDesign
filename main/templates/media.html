@@ -1,0 +1,315 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MediaMarkHub</title>
+
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="{% static 'css/media.css' %}">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CSS CDN (for social icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- HEADER / NAVBAR -->
+  <header class="header">
+    <nav class="nav container-narrow">
+      <a href="#home" class="logo-link" aria-label="Home">
+        <img class="logo" src="{% static 'img/logo.png' %}" alt="MediaMarkHub Logo">
+      </a>
+
+      <!-- hamburger for mobile only (styled via CSS) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="#home">Home</a></li>
+        <li role="none"><a role="menuitem" href="#about">About us</a></li>
+        <li role="none"><a role="menuitem" href="#services">Services</a></li>
+        <li role="none"><a role="menuitem" href="#experts">Meet the Experts</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          MediaMarkHub<br>
+          Design &amp; Digital Strategies<br>
+          That Make Brands Stand Out
+        </h1>
+        <p class="hero-subtitle">
+          From stunning graphics to smart social media, we elevate your brand everywhere.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary">Explore work</button>
+          <button class="btn btn-secondary">Get in touch</button>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="{% static 'img/12.png' %}" alt="Digital strategy illustration">
+      </div>
+    </section>
+
+    <!-- ABOUT US (big split heading) -->
+    <section id="about" class="about-us">
+      <div class="about-us-left">
+        <h2 class="about-heading">ABOUT<br>US</h2>
+        <div class="about-us-text">
+          <p>
+            At MediaMarkHub, we bring your brand to life with bold designs and smart digital strategies.
+            Our team blends creativity with strategy to make your business stand out online.
+            We don’t just design—we help your brand grow and connect with the right audience.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-us-image">
+        <img src="{% static 'img/about_us.png' %}" alt="Team working together">
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <div class="divider">
+        <hr>
+        <div class="divider-icon">
+          <img src="{% static 'img/product-management.png' %}" alt="">
+        </div>
+        <hr>
+      </div>
+
+      <h3 class="section-heading">OUR SERVICES</h3>
+      <p class="section-subheading">Creative visuals and digital strategies, all in one place</p>
+
+      <div class="services-container">
+        <article class="card service-card">
+          <div class="service-icon">
+            <img src="{% static 'img/brush-stroke.png' %}" alt="">
+          </div>
+          <h4>Graphic Design</h4>
+          <p>Logos, brand identity, mockups, social media creatives and more.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">
+            <img src="{% static 'img/social-media.png' %}" alt="">
+          </div>
+          <h4>Social Media Management</h4>
+          <p>Content planning, post design, Instagram &amp; Facebook handling.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">
+            <img src="{% static 'img/idea.png' %}" alt="">
+          </div>
+          <h4>UI &amp; Web Design</h4>
+          <p>Modern, user-friendly websites, landing pages and UI layouts.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="mission-vision">
+      <h3 class="section-heading">Our mission and vision</h3>
+      <p class="section-subheading">Building brands with impact</p>
+
+      <div class="mission-vision-container">
+        <article class="card">
+          <h4>Mission</h4>
+          <p>
+            To design meaningful visuals and manage digital strategies that help brands grow every day.
+            We blend creativity with strategy so every brand leaves a lasting impression.
+          </p>
+        </article>
+
+        <article class="card">
+          <h4>Vision</h4>
+          <p>
+            To be the trusted hub where businesses find creative design and smart social media solutions
+            for long-term success. We help brands connect, engage and thrive in the digital world.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MEET THE EXPERTS (2 on top, 3 below) -->
+    <section id="experts" class="experts-section">
+      <h3 class="section-heading">Our Team</h3>
+      <p class="section-subheading">Meet the experts</p>
+
+      <div class="experts-grid">
+        <!-- Row 1: 2 cards -->
+        <article class="expert-card">
+          <img src="{% static 'img/pavan.JPG' %}" alt="Expert 1">
+          <h4>Pavankalyan</h4>
+          <p class="role">Full Stack Developer</p>
+        </article>
+
+        <article class="expert-card">
+          <img src="{% static 'img/pavan.jpg' %}" alt="Expert 2">
+          <h4>Kiran Kumar</h4>
+          <p class="role">UI Designer &amp; SMM</p>
+        </article>
+
+        <!-- spacer to create 2 + 3 layout -->
+        <article class="expert-card placeholder"></article>
+
+        <!-- Row 2: 3 cards -->
+        <article class="expert-card">
+          <img src="{% static 'img/pavan.jpg' %}" alt="Expert 3">
+          <h4>Member 3</h4>
+          <p class="role">Position</p>
+        </article>
+
+        <article class="expert-card">
+          <img src="{% static 'img/pavan.JPG' %}" alt="Expert 4">
+          <h4>Member 4</h4>
+          <p class="role">Position</p>
+        </article>
+
+        <article class="expert-card">
+          <img src="{% static 'img/pavan.jpg' %}" alt="Expert 5">
+          <h4>Member 5</h4>
+          <p class="role">Position</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT US -->
+    <section id="contact" class="contact">
+      <div class="container-narrow contact-row">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-left">
+          <h2 class="contact-title">CONTACT US</h2>
+          <p class="contact-sub">
+            Have a projects in mind?<br>
+            You’re just one message away.
+          </p>
+
+          <!-- INFO BOX -->
+          <div class="contact-info-box">
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+                <polyline points="3 7 12 13 21 7"/>
+              </svg>
+              <p>mediamarkhub@gmail.com</p>
+            </div>
+
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12 1.05.35 2.08.68 3.07a2 2 0 0 1-.45 2.11L9.91 10.09a16 16 0 0 0 6 6l1.19-1.19a2 2 0 0 1 2.11-.45c.99.33 2.02.56 3.07.68A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <p>+91 63035 47779</p>
+            </div>
+
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <p>mediamarkhub.com</p>
+            </div>
+          </div>
+
+          <!-- OUR EXPERTS CIRCLES -->
+          <div class="contact-experts-row">
+            <div class="contact-experts-avatars">
+              <div class="contact-expert-circle">
+                <img src="{% static 'img/pavan.jpg' %}" alt="Expert 1">
+              </div>
+              <div class="contact-expert-circle">
+                <img src="{% static 'img/pavan.jpg' %}" alt="Expert 2">
+              </div>
+              <div class="contact-expert-circle">
+                <img src="{% static 'img/pavan.jpg' %}" alt="Expert 3">
+              </div>
+              <div class="contact-expert-circle contact-expert-outline">
+                <img src="{% static 'img/pavan.jpg' %}" alt="Expert 4">
+              </div>
+            </div>
+
+            <div class="contact-experts-caption">
+              <span class="contact-experts-line"></span>
+              <span class="contact-experts-label">OUR EXPERTS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE : FORM + SOCIAL ICONS -->
+        <div class="contact-right">
+          <div class="contact-form-card">
+            <form action="{% url 'contact_submit' %}" method="post">
+              {% csrf_token %}
+              <h4>WHAT DO YOU WANT?</h4>
+
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="tel" name="mobile" placeholder="Mobile number">
+              <input type="email" name="email" placeholder="Your mail ID" required>
+              <textarea name="message" rows="4" placeholder="Message" required></textarea>
+
+              <button type="submit">Sent Message</button>
+
+              <p class="form-caption">Somthing line About this<br>form</p>
+            </form>
+
+            <!-- Social icons -->
+            <div class="contact-social">
+              <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="mailto:mediamarkhub@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://wa.me/916303547779" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; {{ now|default:"2025" }} MediaMarkHub. All rights reserved.</p>
+  </footer>
+
+  <!-- NAV TOGGLE SCRIPT (mobile) -->
+  <script>
+    (function () {
+      const body = document.body;
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      if (!navToggle || !navLinks) return;
+
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        body.classList.toggle('nav-open');
+      });
+
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => body.classList.remove('nav-open'));
+      });
+    })();
+  </script>
+</body>
+</html>

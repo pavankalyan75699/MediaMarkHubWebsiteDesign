@@ -1,0 +1,69 @@
+=============================================
+TERMINAL లో CODE RUN చేయడానికి COMMANDS
+=============================================
+
+STEP 1: Project Directory లోకి వెళ్లండి
+----------------------------------------
+cd "d:\danymediamarkhub\mediamarkhub1"
+
+
+STEP 2: Python Install ఉందో తనిఖీ చేయండి
+----------------------------------------
+python --version
+
+లేకుంటే: https://www.python.org/downloads/ నుండి Python install చేయండి
+
+
+STEP 3: Django Install చేయండి
+----------------------------------------
+pip install django
+
+లేక
+pip install -r requirements.txt
+
+
+STEP 4: Database Migrations Run చేయండి
+----------------------------------------
+python manage.py migrate
+
+
+STEP 5: Development Server Start చేయండి
+----------------------------------------
+python manage.py runserver
+
+
+STEP 6: Browser లో Open చేయండి
+----------------------------------------
+http://127.0.0.1:8000/ లేక http://localhost:8000/
+
+
+=============================================
+SINGLE LINE COMMANDS (Copy & Paste):
+=============================================
+
+# Full setup:
+cd "d:\danymediamarkhub\mediamarkhub1" && pip install django && python manage.py migrate && python manage.py runserver
+
+# Just run server (if Django already installed):
+cd "d:\danymediamarkhub\mediamarkhub1" && python manage.py runserver
+
+# Stop server:
+Ctrl + C (Terminal లో)
+
+
+=============================================
+TROUBLESHOOTING:
+=============================================
+
+Python not found అయితే:
+- Python install చేయండి
+- Installation సమయంలో "Add Python to PATH" check చేయండి
+- Terminal restart చేయండి
+
+Port 8000 already in use అయితే:
+python manage.py runserver 8080
+(తర్వాత http://127.0.0.1:8080/ use చేయండి)
+
+Static files load కాకపోతే:
+python manage.py collectstatic
+

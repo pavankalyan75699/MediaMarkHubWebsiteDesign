@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<section style="text-align:center; padding:100px 20px; color:white;">
+  <h1 style="font-size:3rem;">Thank You!</h1>
+  <p style="margin-top:1rem; font-size:1.2rem;">
+    Your message has been sent successfully. We'll get back to you soon.
+  </p>
+  <a href="{% url 'home' %}" 
+     style="display:inline-block;margin-top:2rem;padding:0.8rem 2rem;
+            background:#D698FD;color:white;border-radius:8px;text-decoration:none;">
+    Go Back Home
+  </a>
+</section>
+{% endblock %}
