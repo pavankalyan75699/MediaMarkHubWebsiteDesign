@@ -318,6 +318,34 @@ body{
   color:var(--text-muted);
   margin:0;
 }
+/* ======================= SERVICE CARD ANIMATION ======================= */
+
+.card.service-card {
+    transition: transform 0.9s ease, box-shadow 0.9s ease;
+    transform-origin: center;
+}
+
+.card.service-card:hover {
+    transform: scale(1.07); /* slow smooth popup */
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+}
+/* ======================= SERVICE CARD GLASSY EFFECT ON HOVER ======================= */
+
+.card.service-card {
+    transition: transform 0.9s ease, box-shadow 0.9s ease, background 0.9s ease, backdrop-filter 0.9s ease;
+}
+
+.card.service-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+
+    /* Glassy effect */
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
 
 /* ---------- Mission & Vision ---------- */
 .mission-vision{
@@ -409,9 +437,10 @@ body{
     cursor: pointer;
     transition: .9s ease;
     transform-origin: center;
+    box-shadow: 0.9s ease;
 }
 .expert-card:hover {
-    transform: scale(1.06);            /* smooth slow zoom */
+    transform: scale(1.07);            /* smooth slow zoom */
 }
 
 /* Image */
