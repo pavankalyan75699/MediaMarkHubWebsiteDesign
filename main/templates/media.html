@@ -40,7 +40,7 @@
         <li role="none"><a role="menuitem" href="#home">Home</a></li>
         <li role="none"><a role="menuitem" href="#about">About us</a></li>
         <li role="none"><a role="menuitem" href="#services">Services</a></li>
-        <li role="none"><a role="menuitem" href="#experts">Meet the Experts</a></li>
+        <li role="none"><a role="menuitem" href="#experts">Meet Our Experts</a></li>
         <li role="none"><a role="menuitem" href="#contact">Contact us</a></li>
       </ul>
     </nav>
@@ -128,7 +128,7 @@
 
         <article class="card service-card">
             <div class="service-icon">
-                <img src="{% static 'img/web-dev.png' %}" alt="">
+                <img src="{% static 'img/webdevelopment.png' %}" alt="">
             </div>
             <h4>Web Development</h4>
             <p>Responsive, fast, and high-performing websites built for your business.</p>
@@ -160,7 +160,10 @@
 
       <div class="mission-vision-container">
         <article class="card">
+          <div class="title-img">
+          <img src="{% static 'img/mission.png' %}" alt="">
           <h4>MISSION</h4>
+          </div>
           <p>
             Our mission is to help brands express who they truly are.
 We do this through creative graphic design, smart digital marketing, engaging content, stunning interiors, and meaningful online experiences.
@@ -170,7 +173,10 @@ Every design, every strategy, and every idea we create has one purpose: to conne
         </article>
 
         <article class="card">
+          <div class="title-img">
+          <img class="vision-img" src="{% static 'img/vision.png' %}" alt="">
           <h4>VISION</h4>
+          </div>
           <p>
             Our vision is to become a leading creative agency that sets new standards in branding, design, and digital innovation.
 We want to help businesses communicate better by giving them strong visuals, powerful storytelling, and effective digital presence.
@@ -180,94 +186,126 @@ By blending technology, creativity, and strategy, we aim to create experiences t
         </article>
       </div>
     </section>
-
-    <section id="experts" class="experts-section">
+<section id="experts" class="experts-section">
     <h2 class="experts-title">Our Team</h2>
     <h3 class="experts-subtitle">Meet Our Experts</h3>
 
     <div class="experts-grid">
 
-        <!-- Row 1 – 2 Experts -->
+        <!-- Expert 1 -->
         <div class="expert-card" data-expert="1">
             <img src="{% static 'img/pavan.jpg' %}" alt="Pavan">
+
+            <div class="full-overlay"></div>
+
             <div class="overlay">
-                <h4>Pavankalyan</h4>
-                <p>Full Stack Developer</p>
-                <button class="view-btn">View Works</button>
+                <h4 class="stagger">Pavankalyan</h4>
+                <p class="stagger">Full Stack Developer</p>
+                <button class="view-btn stagger">View Works</button>
             </div>
         </div>
 
+        <!-- Expert 2 -->
         <div class="expert-card" data-expert="2">
             <img src="{% static 'img/pavan.jpg' %}" alt="Kiran">
+
+            <div class="full-overlay"></div>
+
             <div class="overlay">
-                <h4>Kiran Kumar</h4>
-                <p>UI Designer • SMM</p>
-                <button class="view-btn">View Works</button>
+                <h4 class="stagger">Kiran Kumar</h4>
+                <p class="stagger">UI Designer • SMM</p>
+                <button class="view-btn stagger">View Works</button>
             </div>
         </div>
 
-        <!-- Row 2 – 3 Experts -->
+        <!-- Expert 3 -->
         <div class="expert-card" data-expert="3">
             <img src="{% static 'img/pavan.jpg' %}" alt="">
+
+            <div class="full-overlay"></div>
+
             <div class="overlay">
-                <h4>Member 3</h4>
-                <p>Frontend Developer</p>
-                <button class="view-btn">View Works</button>
+                <h4 class="stagger">Member 3</h4>
+                <p class="stagger">Frontend Developer</p>
+                <button class="view-btn stagger">View Works</button>
             </div>
         </div>
 
+        <!-- Expert 4 -->
         <div class="expert-card" data-expert="4">
             <img src="{% static 'img/pavan.jpg' %}" alt="">
+
+            <div class="full-overlay"></div>
+
             <div class="overlay">
-                <h4>Member 4</h4>
-                <p>Backend Developer</p>
-                <button class="view-btn">View Works</button>
+                <h4 class="stagger">Member 4</h4>
+                <p class="stagger">Backend Developer</p>
+                <button class="view-btn stagger">View Works</button>
             </div>
         </div>
 
+        <!-- Expert 5 -->
         <div class="expert-card" data-expert="5">
             <img src="{% static 'img/pavan.jpg' %}" alt="">
+
+            <div class="full-overlay"></div>
+
             <div class="overlay">
-                <h4>Member 5</h4>
-                <p>Marketing Expert</p>
-                <button class="view-btn">View Works</button>
+                <h4 class="stagger">Member 5</h4>
+                <p class="stagger">Marketing Expert</p>
+                <button class="view-btn stagger">View Works</button>
             </div>
         </div>
 
-        <!-- Row 3 – 4 Experts -->
+        <!-- Expert 6 -->
         <div class="expert-card" data-expert="6">
             <img src="{% static 'img/pavan.jpg' %}" alt="">
+
+            <div class="full-overlay"></div>
+
             <div class="overlay">
-                <h4>Member 6</h4>
-                <p>Project Manager</p>
-                <button class="view-btn">View Works</button>
+                <h4 class="stagger">Member 6</h4>
+                <p class="stagger">Project Manager</p>
+                <button class="view-btn stagger">View Works</button>
             </div>
         </div>
 
+        <!-- Expert 7 -->
         <div class="expert-card" data-expert="7">
             <img src="{% static 'img/pavan.jpg' %}" alt="">
+
+            <div class="full-overlay"></div>
+
             <div class="overlay">
-                <h4>Member 7</h4>
-                <p>App Developer</p>
-                <button class="view-btn">View Works</button>
+                <h4 class="stagger">Member 7</h4>
+                <p class="stagger">App Developer</p>
+                <button class="view-btn stagger">View Works</button>
             </div>
         </div>
 
+        <!-- Expert 8 -->
         <div class="expert-card" data-expert="8">
             <img src="{% static 'img/pavan.jpg' %}" alt="">
+
+            <div class="full-overlay"></div>
+
             <div class="overlay">
-                <h4>Member 8</h4>
-                <p>Brand Strategist</p>
-                <button class="view-btn">View Works</button>
+                <h4 class="stagger">Member 8</h4>
+                <p class="stagger">Brand Strategist</p>
+                <button class="view-btn stagger">View Works</button>
             </div>
         </div>
 
+        <!-- Expert 9 -->
         <div class="expert-card" data-expert="9">
             <img src="{% static 'img/pavan.jpg' %}" alt="">
+
+            <div class="full-overlay"></div>
+
             <div class="overlay">
-                <h4>Member 9</h4>
-                <p>Video Editor</p>
-                <button class="view-btn">View Works</button>
+                <h4 class="stagger">Member 9</h4>
+                <p class="stagger">Video Editor</p>
+                <button class="view-btn stagger">View Works</button>
             </div>
         </div>
 
@@ -288,6 +326,7 @@ By blending technology, creativity, and strategy, we aim to create experiences t
         <ul id="modalProjects"></ul>
     </div>
 </div>
+
 
     <!-- CONTACT US -->
     <section id="contact" class="contact">
