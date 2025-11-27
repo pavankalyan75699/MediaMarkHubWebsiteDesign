@@ -140,21 +140,23 @@ body{
   max-width: 50%;
   text-align: left;
 }
-
 .hero-title {
-  font-size: clamp(2.1rem, 4vw, 3.8rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.03;
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 1.12;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 1.8rem;
-  line-height: 1.45;
-  color: var(--text-muted);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 480px;
+  color: #d7c1ff; /* soft lavender like screenshot */
+  margin-bottom: 2rem;
 }
+
 
 /* Buttons */
 .hero-buttons {
@@ -177,26 +179,33 @@ body{
   text-decoration: none;
 }
 .btn-primary {
-  background:transparent;
+  background: #d698fd;
   color: #fff;
   border: 2px solid #d698fd;
 }
 
 .btn-primary:hover {
-  background: #d698fd;
+  background:transparent;
   color: #fff;
 }
 
 .btn-secondary {
-  background: transparent;
+  background: rgba(211, 74, 168, 0.419); /* baby pink tint */
   color: #fff;
- border: 2px solid #d698fd;
+  border: 2px solid #ffb6c1; /* baby pink border */
+  backdrop-filter: blur(10px); /* frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
 }
 
+/* Hover effect */
 .btn-secondary:hover {
-  background: #d698fd;
-  color: #fff;
+  background: transparent;
+  border-color: #ffc4d0;
 }
+
 
 /* Right Side — Clean, Box-free Image */
 .hero-image {
@@ -299,12 +308,11 @@ body{
   display: block;
 }
 .about-tagline {
-    font-size: 2.2rem;        /* Bigger */
-    font-weight: 700;         /* Bold */
+    font-size: 2.9rem;        /* Bigger */
+    font-weight: 7000;         /* Bold */
     color: #ffffff;           /* Pure white */
     margin-bottom: 2rem;
     line-height: 1.4;
-    font-style: italic;       /* Elegant highlight */
     letter-spacing: 0.5px;
 }
 
@@ -324,102 +332,135 @@ body{
 
 
 /* ---------- Services ---------- */
-.services{
-  padding:4rem 1.25rem;
-  max-width:1200px;
-  margin:2rem auto;
-  text-align:center;
+.services {
+  padding: 4rem 1.25rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  text-align: center;
 }
-.divider{
-  display:flex;
-  align-items:center;
-  gap:1rem;
-  margin-bottom:1.5rem;
+.services h3.section-heading {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-bottom: 0.3rem;
 }
-.divider hr{
-  flex:1;
-  border:none;
-  border-top:1px solid rgba(255,255,255,0.25);
+.services p.section-subheading {
+  font-size: 1.05rem;
+  color: #d4c6ff;
+  opacity: 0.85;
+  margin-bottom: 2.3rem;
 }
-.divider-icon{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  background:rgba(0,0,0,0.25);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.divider-icon img{
-  width:40px;
-  height:40px;
-  object-fit:contain;
-}
-.services-container{
-  display:grid;
-  grid-template-columns:repeat(3, minmax(220px, 1fr));
-  gap:1.75rem;
-  margin-top:2.5rem;
-}
-.card.service-card{
-  padding:1.8rem 1.4rem;
-  border-radius:20px;
-  background:var(--card-bg);
-  border:1px solid var(--card-border);
-  box-shadow:0 10px 25px rgba(0,0,0,0.35);
-  text-align:left;
-}
-.service-icon{
-  width:56px;
-  height:56px;
-  margin-bottom:0.9rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.service-icon img{
-  width:32px;
-  height:32px;
-  object-fit:contain;
-}
-.service-card h4{
-  font-size:1.05rem;
-  margin:0 0 0.35rem;
-  font-weight:700;
-}
-.service-card p{
-  font-size:0.92rem;
-  color:var(--text-muted);
-  margin:0;
-}
-/* ======================= SERVICE CARD ANIMATION ======================= */
 
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.divider-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Services Cards Grid */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+/* Service Card — Default */
 .card.service-card {
-    transition: transform 0.9s ease, box-shadow 0.9s ease;
-    transform-origin: center;
+  padding: 1.8rem 1.4rem;
+  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  text-align: left;
+  color: #ffffff;
+  transition: all 0.4s ease;
 }
 
+/* Icon */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  filter: brightness(150%) invert(100%); /* default = white icon */
+}
+
+.service-card h4 {
+  font-size: 1.05rem;
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+  transition: all 0.4s ease;
+}
+
+.service-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin: 0;
+  transition: all 0.4s ease;
+}
+
+/* ---------- HOVER EFFECT — WHITE POPUP STYLE ---------- */
 .card.service-card:hover {
-    transform: scale(1.07); /* slow smooth popup */
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
-}
-/* ======================= SERVICE CARD GLASSY EFFECT ON HOVER ======================= */
-
-.card.service-card {
-    transition: transform 0.9s ease, box-shadow 0.9s ease, background 0.9s ease, backdrop-filter 0.9s ease;
+  transform: translateY(-10px) scale(1.06);
+  background: #ffffff !important;
+  border-color: #e6e6e6;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+  color: #000 !important;
 }
 
-.card.service-card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
-
-    /* Glassy effect */
-    background: rgba(255, 255, 255, 0.15); 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+/* Text turns black */
+.card.service-card:hover h4,
+.card.service-card:hover p {
+  color: #000 !important;
 }
 
+/* Icon turns black */
+.card.service-card:hover .service-icon img {
+  filter: brightness(10%) invert(0%); /* black icon */
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ---------- Mission & Vision ---------- */
 .mission-vision{
@@ -428,6 +469,23 @@ body{
   margin:2rem auto;
   text-align:center;
 }
+.mission-vision .section-heading {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    opacity: 0.8;
+    margin-bottom: 0.3rem;
+}
+
+.mission-vision .section-subheading {
+    font-size: 1.05rem;
+    color: #d4c6ff;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
 .mission-vision-container{
   display:grid;
   grid-template-columns:repeat(2, minmax(260px, 1fr));
